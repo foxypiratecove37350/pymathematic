@@ -27,7 +27,18 @@ class Rational:
     numerator: int
     denominator: int = 1
 
-    def __init__(self, numerator: int, denominator: int = 1) -> None:
+    def __init__(self, numerator: int, denominator: int | None = None) -> None:
+        if isinstance(numerator, str) and denominator is None:
+            parts = numerator.split('/')
+            
+            if len(parts) == 2:
+                numerator, denominator = parts
+            elif len(parts) == 1:
+                numerator = parts[0]
+                denominator = 1
+            else:
+                raise InvalidLiteralError((self.__class__, numerator))
+        
         numerator = float(numerator)
         denominator = float(denominator)
 
@@ -116,3 +127,12 @@ class Rational:
         new_numerator = self - self // other * other
 
         return self.__class__(new_numerator)
+    
+    def __pow__(self, other: Self) -> Self:
+        if not isinstance(other, self.__class__):
+            other = self.__class__(other)
+        
+        new_numerator = (self.numerator ** other.numerator) ** 1 / other.denominator
+        new_denominator = (self.denominator ** other.numerator) ** 1 / other.denominator
+
+        return self.__class__(new_numerator, new_denominator)

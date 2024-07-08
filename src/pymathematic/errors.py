@@ -25,3 +25,12 @@ class NegativeIntegerError(ValueError):
             super().__init__('Negative integer expected')
         else:
             super().__init__(msg)
+            
+class InvalidLiteralError(ValueError):
+    def __init__(self, infos: tuple[type, str], msg: str | None = None) -> None:
+        if msg is None:
+            self.cls = infos[0]
+            self.literal = infos[1]
+            super().__init__(f"Invalid literal for {self.cls.__class__.__name__}(): '{self.literal}'")
+        else:
+            super().__init__(msg)
