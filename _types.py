@@ -1,6 +1,5 @@
 from typing import Any, Callable, Self
 from dataclasses import dataclass
-import math
 
 from .errors import *
 from .functions import *
@@ -11,7 +10,7 @@ class NaturalInteger:
 
     def __init__(self, value: int) -> None:
         if value < 0 or int(value) != float(value):
-            raise ValueError("x must be a positive integer")
+            raise PositiveIntegerError
 
         self.value = int(value)
 

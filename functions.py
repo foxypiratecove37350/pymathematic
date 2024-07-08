@@ -66,7 +66,7 @@ def factorial(x: int) -> int:
     """Returns the factorial of x"""
 
     if int(x) != x or x < 0:
-        raise ValueError("x must be a positive integer")
+        raise PositiveIntegerError
     
     x = int(x)
 
