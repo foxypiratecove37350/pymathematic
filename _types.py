@@ -53,6 +53,12 @@ class Rational:
     
     def __str__(self) -> str:
         return f"{self.numerator}/{self.denominator}"
+    
+    def __float__(self) -> float:
+        return self.numerator / self.denominator
+
+    def __int__(self) -> int:
+        return int(float(self))
 
     def _simplify(self) -> None:
         _gcd = gcd(self.numerator, self.denominator)
@@ -81,7 +87,32 @@ class Rational:
         if not isinstance(other, self.__class__):
             other = self.__class__(other)
         
-        new_numerator = self.numerator * other.denominator - other.numerator * self.denominator
+        new_numerator = self.numerator * other.numerator
         new_denominator = self.denominator * other.denominator
 
         return self.__class__(new_numerator, new_denominator)
+
+    def __truediv__(self, other: Self) -> Self:
+        if not isinstance(other, self.__class__):
+            other = self.__class__(other)
+        
+        new_numerator = self.numerator * other.denominator
+        new_denominator = self.denominator * other.numerator
+
+        return self.__class__(new_numerator, new_denominator)
+
+    def __floordiv__(self, other: Self) -> Self:
+        if not isinstance(other, self.__class__):
+            other = self.__class__(other)
+        
+        new_numerator = int(self / other)
+
+        return self.__class__(new_numerator)
+    
+    def __mod__(self, other: Self) -> Self:
+        if not isinstance(other, self.__class__):
+            other = self.__class__(other)
+        
+        new_numerator = self - self // other * other
+
+        return self.__class__(new_numerator)
