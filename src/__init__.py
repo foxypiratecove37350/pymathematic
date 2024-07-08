@@ -1,6 +1,6 @@
-"""mathio, A better Python package for math.
+"""pymathematic, A better Python package for math.
 
-mathio is a Python package designed to make mathematical operations easier, faster, and more powerful. Its goal is to provide a clean and intuitive package for a wide range of mathematical functions.
+pymathematic is a Python package designed to make mathematical operations easier, faster, and more powerful. Its goal is to provide a clean and intuitive package for a wide range of mathematical functions.
 """
 
 from .errors import *

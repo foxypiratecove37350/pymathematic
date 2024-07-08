@@ -1,21 +1,21 @@
-# <p align="center">`mathio`</p>
+# <p align="center">`pymathematic`</p>
 ### <p align="center">*A better Python package for math.*</p>
 
-`mathio` is a Python package designed to make mathematical operations easier, faster, and more powerful. Its goal is to provide a clean and intuitive package for a wide range of mathematical functions.
+`pymathematic` is a Python package designed to make mathematical operations easier, faster, and more powerful. Its goal is to provide a clean and intuitive package for a wide range of mathematical functions.
 
 ## Key Features
 
 ### Ease of Use :smile:
-`mathio` is designed to be easy to use, even for complex mathematical operations.
+`pymathematic` is designed to be easy to use, even for complex mathematical operations.
 
 ### Performance :rocket:
-`mathio` is optimized for performance, making it suitable for large-scale mathematical computations.
+`pymathematic` is optimized for performance, making it suitable for large-scale mathematical computations.
 
 ### Power and Flexibility :muscle:
-`mathio` provides a wide range of mathematical functions, from basic arithmetic to advanced calculus and linear algebra.
+`pymathematic` provides a wide range of mathematical functions, from basic arithmetic to advanced calculus and linear algebra.
 
 ### Clean and Intuitive :sparkles:
-`mathio` is designed to be clean, intuitive, and easy to use.
+`pymathematic` is designed to be clean, intuitive, and easy to use.
 
 ## Mathematical Capabilities
 

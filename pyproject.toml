@@ -2,7 +2,7 @@
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 [project]
-name = "mathio"
+name = "pymathematic"
 version = "0.0.1"
 authors = [
   { name="foxypiratecove37350", email="foxypiratecove12@gmail.com" },
@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/foxypiratecove37350/mathio"
-Issues = "https://github.com/foxypiratecove37350/mathio/issues"
+Homepage = "https://github.com/foxypiratecove37350/pymathematic"
+Issues = "https://github.com/foxypiratecove37350/pymathematic/issues"
