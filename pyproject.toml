@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "mathio"
+version = "0.0.1"
+authors = [
+  { name="foxypiratecove37350", email="foxypiratecove12@gmail.com" },
+]
+description = "A better Python package for math."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GPL-2 License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/foxypiratecove37350/mathio"
+Issues = "https://github.com/foxypiratecove37350/mathio/issues"
