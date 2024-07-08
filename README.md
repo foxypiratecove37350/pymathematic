@@ -1,7 +1,7 @@
 # <p align="center">`mathio`</p>
 ### <p align="center">*A better Python package for math.*</p>
 
-`mathio` is a Python package designed to make mathematical operations easier, faster, and more powerful. Our goal is to provide a clean and intuitive API for a wide range of mathematical functions.
+`mathio` is a Python package designed to make mathematical operations easier, faster, and more powerful. Its goal is to provide a clean and intuitive package for a wide range of mathematical functions.
 
 ## Key Features
 
