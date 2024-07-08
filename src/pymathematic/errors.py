@@ -12,6 +12,13 @@ class DivisionByZeroError(ZeroDivisionError):
         else:
             super().__init__(msg)
 
+class IntegerError(ValueError):
+    def __init__(self, msg: str | None = None) -> None:
+        if msg is None:
+            super().__init__('Positive or negative integer expected')
+        else:
+            super().__init__(msg)
+
 class PositiveIntegerError(ValueError):
     def __init__(self, msg: str | None = None) -> None:
         if msg is None:
