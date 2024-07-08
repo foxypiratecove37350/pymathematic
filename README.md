@@ -15,7 +15,7 @@
 `mathio` provides a wide range of mathematical functions, from basic arithmetic to advanced calculus and linear algebra.
 
 ### Clean and Intuitive :sparkles:
-`mathio`'s is designed to be clean, intuitive, and easy to use.
+`mathio` is designed to be clean, intuitive, and easy to use.
 
 ## Mathematical Capabilities
 
