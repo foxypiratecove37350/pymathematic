@@ -1,4 +1,5 @@
 from functools import lru_cache
+from decimal import Decimal
 
 from .constants import *
 from .errors import *
@@ -35,22 +36,22 @@ def cos(x: number) -> number:
 def tan(x: number) -> number:
     """Returns the tangent of the given angle in radians."""
 
-    return sin(x) / cos(x)
+    return Decimal(str(sin(x))) / Decimal(str(cos(x)))
 
 def csc(x: number) -> number:
     """Returns the cosecant of the given angle in radians."""
 
-    return 1 / sin(x)
+    return 1 / Decimal(str(sin(x)))
 
 def sec(x: number) -> number:
     """Returns the secant of the given angle in radians."""
 
-    return 1 / cos(x)
+    return 1 / Decimal(str(cos(x)))
 
 def cot(x: number) -> number:
     """Returns the cotangent of the given angle in radians."""
 
-    return cos(x) / sin(x)
+    return Decimal(str(cos(x))) / Decimal(str(sin(x)))
 
 # Prime factorization
 
@@ -81,17 +82,29 @@ def primorial(p: int) -> int:
 
     raise InDevError
 
+@lru_cache
+def gamma(x: number) -> number:
+    """Returns the gamma function of x"""
+
+    raise InDevError
+
 # GCD, LCM, ...
 
 def gcd(x: real, y: real) -> int:
     """Returns the greatest common divisor of x and y"""
 
+    x = Decimal(str(x))
+    y = Decimal(str(y))
+
     while y != 0:
         x, y = y, x % y
     
-    return x
+    return float(x)
 
 def lcm(x: real, y: real) -> int:
     """Returns the least common multiple of x and y"""
+    
+    x = Decimal(str(x))
+    y = Decimal(str(y))
 
-    return (x * y) / gcd(x, y)
+    return float((x * y) / gcd(x, y))
